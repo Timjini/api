@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 resources :sessions, only: [:create, :show]
 resources :users, only: [:create, :show, :index] 
 resources :registrations, only: [:create]   
-delete  :logout, to:"sessions#logged_out"
+delete  :logged_out, to:"sessions#logged_out"
 get :looged_in, to: "sessions#logged_in"   
 
     end
